@@ -2,14 +2,14 @@
 
 if [ $BUILD_FROM_SRC -ne 0 ]
 then
-  git clone --depth 1 --branch 0.16.3 https://github.com/bitcoin/bitcoin
+  git clone --depth 1 --branch 0.17.1 https://github.com/bitcoin/bitcoin
   cd bitcoin
   ./autogen.sh
   ./configure  --disable-tests --disable-wallet
   make -j 4
   make install
 else
-  BITCOIN_VERSION=0.16.3
+  BITCOIN_VERSION=0.17.1
   BITCOIN_FILE_NAME=bitcoin-$BITCOIN_VERSION-x86_64-linux-gnu.tar.gz
   BITCOIN_URL=https://bitcoin.org/bin/bitcoin-core-$BITCOIN_VERSION/$BITCOIN_FILE_NAME
 
