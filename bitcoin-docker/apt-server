@@ -3,6 +3,8 @@
 apt-get update
 apt-get upgrade -y
 
+apt-get install -y --no-install-recommends apt-utils
+
 apt-get install -y libboost-all-dev libssl-dev libevent-dev
 
 # keep image small
